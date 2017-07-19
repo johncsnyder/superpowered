@@ -1,0 +1,11 @@
+.DS_Store
+.bupignore
+*.sublime-workspace
+*.pyc
+build
+dist
+*.egg-info
+sftp-config.json
+__pycache__
+*.cpp
+*.so

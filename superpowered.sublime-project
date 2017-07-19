@@ -1,0 +1,30 @@
+{
+	"build_systems":
+	[
+		{
+			"name": "Build",
+			"shell_cmd": "cd $project_path && python setup.py build_ext --inplace -v"
+		},
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"python\" -u \"$file\""
+		}
+	],
+	"folders":
+	[
+		{
+			"folder_exclude_patterns":
+			[
+				"*.egg-info",
+				"*.ipynb_checkpoints",
+				"build"
+			],
+			"path": "."
+		},
+		{
+			"path": "../SuperpoweredSDK"
+		}
+	]
+}
