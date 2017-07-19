@@ -11,24 +11,6 @@ cdef extern from "numpy/arrayobject.h":
     void PyArray_ENABLEFLAGS(np.ndarray arr, int flags)
 
 
-cdef extern from "util.cc":
-
-    int _read(SuperpoweredDecoder *decoder, float **sampleBuffer,
-           long &startSample, long &endSample, bint precise,
-           long &numSamples, long &maxNumSamples, 
-           float rateShift, int pitchShift, int decibel)
-
-    int _analyze(SuperpoweredDecoder *decoder, 
-              long &startSample, long &endSample, bint precise, int decibel,
-              unsigned char **averageWaveform,
-              unsigned char **peakWaveform, unsigned char **lowWaveform,
-              unsigned char **midWaveform, unsigned char **highWaveform,
-              unsigned char **notes, int *waveformSize, char **overviewWaveform,
-              int *overviewSize, float *averageDecibel,
-              float *loudpartsAverageDecibel, float *peakDecibel, float *bpm,
-              float *beatgridStartMs, int *keyIndex)
-
-
 cdef data_to_numpy_array_float32(float *data, np.npy_intp size):
     cdef np.ndarray[float, ndim=1] arr = np.PyArray_SimpleNewFromData(1, &size, np.NPY_FLOAT32, data)
     PyArray_ENABLEFLAGS(arr, np.NPY_OWNDATA)
