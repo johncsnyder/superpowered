@@ -32,7 +32,7 @@ If you run into trouble, please open an issue.
 
 ### License
 
-Although the Superpowered SDK is not bundled with this wrapper, it includes 
-some of the original source code from the Superpowered SDK. Any use is 
-subject to the terms of its license. The latest version can be found at 
+Although the _Superpowered SDK_ is not bundled with this wrapper, it includes 
+some of the original source code. Any use is 
+subject to the terms of the _Superpowered SDK_ license. The latest version can be found at 
 <http://superpowered.com/license>.
