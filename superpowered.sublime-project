@@ -6,6 +6,10 @@
 			"shell_cmd": "cd $project_path && python setup.py build_ext --inplace -v"
 		},
 		{
+			"name": "Run Tests",
+			"shell_cmd": "cd $project_path && nosetests"
+		},
+		{
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 			"name": "Anaconda Python Builder",
 			"selector": "source.python",
