@@ -8,7 +8,6 @@ from Cython.Distutils import build_ext
 from Cython.Build import cythonize
 import numpy as np
 
-
 SUPERPOWERED_ROOT = os.environ.get('SUPERPOWERED_ROOT', '')
 
 libraries = {
@@ -39,10 +38,8 @@ setup(
     description='Python Wrapper for Superpowered SDK',
     author='John Snyder',
     author_email='johncsnyder@gmail.com',
-    # url='http://github.com/cmcqueen/simplerandom',
+    url='https://github.com/johncsnyder/superpowered',
     cmdclass={'build_ext': build_ext},
     ext_modules=ext_modules,
     long_description=open('readme.md').read(),
-    # test_suite='nose.collector',
-    # tests_require=['nose'],
 )
